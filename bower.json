@@ -1,0 +1,25 @@
+{
+  "name": "mpc",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wendelb/RaspiRadio",
+  "authors": [
+    "Bernhard Wendel <BWendel@gmx.de>"
+  ],
+  "description": "Use a Raspberry Pi as Webradio",
+  "main": "bin/www",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "webradio"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ]
+}
