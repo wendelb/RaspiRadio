@@ -14,6 +14,17 @@ function SocketIOServer(http) {
         // Init für diesen Client durchführen
         socket.emit('playerstatus', client.status.state);
         socket.emit('newSong', client.currentsong);
+
+        socket.on('toggleRadio', function () {
+            if (client.status.state === "play") {
+                debug("Toggle Radio -> Stop")
+                client.stop();
+            }
+            else {
+                debug("Toggle Radio -> Play")
+                client.play();
+            }
+        });
     });
 
     client.on('ready', function () {
@@ -24,6 +35,11 @@ function SocketIOServer(http) {
         debug('MPD new song: %s', newSong.Title);
         io.emit('newSong', newSong);
     });
+
+    client.on('status', function (status) {
+        debug('MPD status changed to: %s', status.state);
+        io.emit('playerstatus', status.state);
+    })
 }
 
 module.exports = exports = SocketIOServer;
