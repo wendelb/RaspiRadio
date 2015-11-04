@@ -1,2 +1,32 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+    <!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">{{title}}</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class=""><a class="toggle-radio" href="#">Radio</a></li>
+                <li class="active"><a class="toggle-speaker" href="#">Lautsprecher</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+    <div class="well">
+        <div class="pull-left item-stream"></div>
+        <div class="marquee item-titel"></div>
+    </div>
+
+    <div class="center-block radio-icon">
+        <img src="/images/radio-on.png" class="radio-on img-responsive" />
+        <img src="/images/radio-off.png" class="radio-off img-responsive" />
+    </div>
+</div>
