@@ -17,11 +17,11 @@ function SocketIOServer(http) {
 
         socket.on('toggleRadio', function () {
             if (client.status.state === "play") {
-                debug("Toggle Radio -> Stop")
+                debug("Toggle Radio -> Stop");
                 client.stop();
             }
             else {
-                debug("Toggle Radio -> Play")
+                debug("Toggle Radio -> Play");
                 client.play();
             }
         });
@@ -39,7 +39,7 @@ function SocketIOServer(http) {
     client.on('status', function (status) {
         debug('MPD status changed to: %s', status.state);
         io.emit('playerstatus', status.state);
-    })
+    });
 }
 
 module.exports = exports = SocketIOServer;
