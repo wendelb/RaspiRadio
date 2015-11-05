@@ -1,11 +1,8 @@
-// Configure MPD Connection
 mpd:
-	host: '192.168.2.100',
-	port: 6600
-// Some internalization settings
+   host: '192.168.2.100'
+   port: 6600
 lang:
-	radio: 'Radio'
-	speaker: 'Lautsprecher'
-// Server options
+   radio: 'Radio'
+   speaker: 'Lautsprecher'
 server:
-	port: 3000
+   port: 3000
