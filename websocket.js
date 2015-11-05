@@ -1,12 +1,16 @@
 ﻿"use strict";
 
 var socket = require('socket.io'),
+	config = require("config"),
     debug = require('debug')('mpc:websocket'),
     MPDAdapter = require('mpdadapter');
 
 function SocketIOServer(http) {
     var io = socket(http),
-        client = new MPDAdapter('192.168.2.100');
+        client = new MPDAdapter(
+        		config.get("mpd.host"),
+        		config.get("mpd.port")
+        );
 
     io.on('connection', function (socket) {
         debug('A client connected');
